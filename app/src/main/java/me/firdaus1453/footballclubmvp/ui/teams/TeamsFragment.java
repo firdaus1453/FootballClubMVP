@@ -55,7 +55,6 @@ public class TeamsFragment extends Fragment implements TeamsContract.View {
         });
 
         return view;
-
     }
 
     @Override
@@ -68,6 +67,7 @@ public class TeamsFragment extends Fragment implements TeamsContract.View {
 
     @Override
     public void hideProgress() {
+        swipeRefresh.setRefreshing(false);
         progressDialog.dismiss();
     }
 

@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  */
 public class TeamsItem {
 
-    @SerializedName("idTeams")
+    @SerializedName("idTeam")
     private String idTeam;
 
     @SerializedName("strTeam")

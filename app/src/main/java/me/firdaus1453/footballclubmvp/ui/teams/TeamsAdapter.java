@@ -29,7 +29,6 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> 
     private final Context context;
     private final List<TeamsItem> teamsItemList;
 
-
     public TeamsAdapter(Context context, List<TeamsItem> teamsItemList) {
         this.context = context;
         this.teamsItemList = teamsItemList;
@@ -54,7 +53,6 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> 
                 Toast.makeText(context, teamsItem.getStrTeam(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @Override
@@ -72,7 +70,6 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> 
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
-
         }
     }
 }
