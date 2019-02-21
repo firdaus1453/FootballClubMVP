@@ -1,6 +1,7 @@
 package me.firdaus1453.footballclubmvp.ui.teams;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -20,6 +21,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.firdaus1453.footballclubmvp.R;
 import me.firdaus1453.footballclubmvp.model.TeamsItem;
+import me.firdaus1453.footballclubmvp.ui.detail.DetailTeamActivity;
+import me.firdaus1453.footballclubmvp.utils.Constants;
 
 /**
  * Created by firdaus1453 on 2/21/2019.
@@ -50,7 +53,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, teamsItem.getStrTeam(), Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context,DetailTeamActivity.class).putExtra(Constants.KEY_DATA, teamsItem));
             }
         });
     }
