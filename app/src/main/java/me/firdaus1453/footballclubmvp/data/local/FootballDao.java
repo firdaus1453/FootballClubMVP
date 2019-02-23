@@ -5,6 +5,8 @@ import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
+import java.util.List;
+
 import me.firdaus1453.footballclubmvp.model.TeamsItem;
 
 /**
@@ -21,4 +23,7 @@ public interface FootballDao {
 
     @Delete
     void delete(TeamsItem teamsItem);
+
+    @Query("SELECT * FROM teams ORDER BY strTeam ASC")
+    List<TeamsItem> selectFavorite();
 }
